@@ -8,10 +8,9 @@ import Footer from './components/Footer.tsx';
 
 import Home from './pages/Home.tsx';
 import About from './pages/About.tsx';
-import Programs from './pages/Programs.tsx';
-import Team from './pages/Team.tsx';
-import Contribute from './pages/Contribute.tsx';
-import Join from './pages/Join.tsx';
+import Projects from './pages/Projects.tsx';
+import Organizations from './pages/Organizations.tsx';
+import Contact from './pages/Contact.tsx';
 import NotFound from './pages/NotFound.tsx';
 import './App.css';
 
@@ -27,10 +26,9 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/programs" element={<Programs />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/contribute" element={<Contribute />} />
-              <Route path="/join" element={<Join />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/organizations" element={<Organizations />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Box>

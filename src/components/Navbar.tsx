@@ -6,10 +6,9 @@ import logo from '../img/Logo.png';
 
 const navLinks = [
   { label: 'About', path: '/about' },
-  { label: 'Programs', path: '/programs' },
-  { label: 'Team', path: '/team' },
-  { label: 'Contribute', path: '/contribute' },
-  { label: 'Join', path: '/join' },
+  { label: 'Projects', path: '/projects' },
+  { label: 'Organizations', path: '/organizations' },
+  { label: 'Contact', path: '/contact' },
 ];
 
 const Navbar: React.FC = () => {

@@ -1,3 +1,4 @@
+// This is the content of the Organizations.tsx file
 
 import React, { useEffect } from 'react';
 import { Box, Typography, Grid, Card, CardContent, Button } from '@mui/material';
