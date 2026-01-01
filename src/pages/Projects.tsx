@@ -63,19 +63,21 @@ import { Box, Typography, Grid, Card, CardContent, Button, Collapse, IconButton 
 import { Carousel } from 'react-responsive-carousel';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Link from '@mui/material/Link';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 const curriculumPhilosophy = [
 	{
-		title: 'Hands-On Learning',
-		description: 'We believe students learn best by doing. Our programs are interactive and project-based.'
+		title: 'Autonomous Vehicles',
+		description: 'Vehicles that drive themselves, particularly in developing countries'
 	},
 	{
-		title: 'Accessible for All',
-		description: 'We design our curriculum to be inclusive and adaptable for students of all backgrounds.'
+		title: 'Robotics',
+		description: 'The employment of robots to further research and development'
 	},
 	{
-		title: 'Real-World Impact',
-		description: 'Our courses connect STEM concepts to real-world problems and solutions.'
+		title: 'Machine Vision',
+		description: 'Software designed to interpret the world through visual inputs'
 	}
 ];
 
@@ -88,110 +90,139 @@ const Projects: React.FC = () => {
 
 	return (
 		<Box px={{ xs: 2, md: 6 }} py={6}>
-			{/* Email List & Upcoming Projects Section - Two Column Like Mission/Vision */}
-			<Box display="grid" gridTemplateColumns={{ xs: '1fr', md: '1fr 1fr' }} gap={4} mb={6}>
-		<Box bgcolor="#473024" color="#fff" borderRadius={2} p={4} border="3px solid #f24c02">
-					<Typography variant="h4" fontWeight={700} fontFamily="Inter, Arial, sans-serif" mb={2} align="center">
-						Join Our Email List
-					</Typography>
-					<Box sx={{ borderRadius: 2, overflow: 'hidden', boxShadow: 2 }}>
-						<iframe
-							title="Email List Form"
-							src="https://docs.google.com/forms/d/e/1FAIpQLSfuO4yWisWh7m0YcRzWSbD0YvkdtBHOgDC0TKqJfszfnZoyXw/viewform?embedded=true"
-							width="100%"
-							height="500"
-							frameBorder="0"
-							marginHeight={0}
-							marginWidth={0}
-							style={{ background: '#fff', borderRadius: 8, width: '100%', minHeight: 400, filter: 'invert(85%) hue-rotate(180deg)'}}
-						>Loading…</iframe>
-					</Box>
-				</Box>
-	<Box bgcolor="#303947" color="#fff" borderRadius={2} p={4} border="3px solid #4083cc">
-					<Typography variant="h4" fontWeight={700} fontFamily="Inter, Arial, sans-serif" mb={2} align="center">
-						Upcoming Projects
-					</Typography>
-					<Box sx={{ borderRadius: 2, overflow: 'hidden', boxShadow: 2 }}>
-						<iframe
-							title="Upcoming Projects Sheet"
-							src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTqYF7j6m434dECqFqmRPbM3QHwvPVGjMhnZyqgwTAP-UyU6HdbiXwOPRbLqRSNff5-BAskWZlFAWvk/pubhtml?gid=704390668&amp;single=true&amp;widget=true&amp;headers=false"
-							width="100%"
-							height="500"
-							frameBorder="0"
-							marginHeight={0}
-							marginWidth={0}
-							style={{ background: '#fff', borderRadius: 8, width: '100%', minHeight: 400, filter: 'invert(85%) hue-rotate(180deg)' }}
-						></iframe>
-					</Box>
-				</Box>
-			</Box>
-
 			{/* Philosophy Section Header */}
 			<Typography variant="h4" fontWeight={700} mb={4} fontFamily="Inter, Arial, sans-serif" align="center">
-				Philosophy
+				Areas of Interest
 			</Typography>
 			{/* Curriculum Philosophy - Three Column Like About Top Section */}
 			<Box display="grid" gridTemplateColumns={{ xs: '1fr', md: '1fr 1fr 1fr' }} gap={4} mb={6}>
-				{curriculumPhilosophy.map((item, idx) => (
-					<Box key={idx} textAlign="center">
-						<Typography variant="h5" fontWeight={700} fontFamily="Inter, Arial, sans-serif" mb={1} align="center">
-							{item.title}
-						</Typography>
-						<Typography color="text.secondary" align="center">
-							{item.description}
-						</Typography>
-					</Box>
-				))}
+				   {curriculumPhilosophy.map((item, idx) => (
+					   <React.Fragment key={idx}>
+						   <Box textAlign="center">
+							   <Typography variant="h5" fontWeight={700} fontFamily="Inter, Arial, sans-serif" mb={1} align="center">
+								   {item.title}
+							   </Typography>
+							   <Typography color="text.secondary" align="center">
+								   {item.description}
+							   </Typography>
+						   </Box>
+					   </React.Fragment>
+				   ))}
 			</Box>
 
 			{/* Our Courses Section - Five Grids Like Partners Section in About */}
 	<Typography variant="h4" fontWeight={700} mb={4} fontFamily="Inter, Arial, sans-serif" align="center">
-				Our Courses
+				Projects
 			</Typography>
 
-			{/* Engineering Section */}
-			<Typography variant="h5" fontWeight={700} mb={2} fontFamily="Inter, Arial, sans-serif">Engineering</Typography>
-			<Box
-				display="grid"
-				sx={{
-					gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
-					gap: { xs: 2, md: 4 },
-					'@media (max-width:1200px)': { gridTemplateColumns: 'repeat(2, minmax(0, 1fr))' },
-					'@media (max-width:800px)': { gridTemplateColumns: '1fr' },
-				}}
-				mb={4}
-			>
-				{/* Engineering courses with carousels */}
-	<Box bgcolor="#473024" color="#fff" borderRadius={2} p={2} display="flex" flexDirection="column" alignItems="flex-start" justifyContent="flex-start" sx={{ width: { xs: '100%' }, boxSizing: { xs: 'border-box' } }}>
-					<Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay={false} width="100%" dynamicHeight={false}>
-						<img src={img_1_1_1} alt="Maker Space Workshops 1" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
-						<img src={img_1_1_2} alt="Maker Space Workshops 2" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
-						<img src={img_1_1_3} alt="Maker Space Workshops 3" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
-					</Carousel>
-					<Typography fontWeight={700} mt={2} fontFamily="Inter, Arial, sans-serif" sx={{ fontSize: { xs: 18, md: 20 } }}>[1.1] Maker Space Workshops**</Typography>
-					<Typography color="text.secondary" fontFamily="Inter, Arial, sans-serif" sx={{ whiteSpace: 'pre-line' }}>
-						• Grades 1-5 OK and grades 2-4 ideal (US/Canada){"\n"}
-						• Ages 6-13 (International){"\n"}
-						• Projector/TV, occasional office supplies{"\n"}
-						• Introducing basic engineering concepts through fun and simple challenges like popsicle stick bridges, spaghetti and marshmallow towers, wooden cars, and more!
-					</Typography>
-				</Box>
-	<Box bgcolor="#473024" color="#fff" borderRadius={2} p={2} display="flex" flexDirection="column" alignItems="flex-start" justifyContent="flex-start" sx={{ width: { xs: '100%' }, boxSizing: { xs: 'border-box' } }}>
-					<Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay={false} width="100%" dynamicHeight={false}>
-						<img src={img_1_2_1} alt="Intro to Engineering 1" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
-						<img src={img_1_2_2} alt="Intro to Engineering 2" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
-						<img src={img_1_2_3} alt="Intro to Engineering 3" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
-					</Carousel>
-					<Typography fontWeight={700} mt={2} fontFamily="Inter, Arial, sans-serif" sx={{ fontSize: { xs: 18, md: 20 } }}>[1.2] Intro to Engineering**</Typography>
-					<Typography color="text.secondary" fontFamily="Inter, Arial, sans-serif" sx={{ whiteSpace: 'pre-line' }}>
-						• Grades 5-8 OK and grades 6-8 ideal (US/Canada){"\n"}
-						• Ages 12-18 (International){"\n"}
-						• Projector/TV{"\n"}
-						• Dive into engineering principles with hands-on projects like catapults, bridges, and more!
-					</Typography>
-				</Box>
-				{/* ...rest of the course sections ... */}
-			</Box>
+			   {/* Engineering Section */}
+			   <Box
+				   display="grid"
+				   sx={{
+					   gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+					   gap: { xs: 2, md: 4 },
+					   '@media (max-width:1200px)': { gridTemplateColumns: 'repeat(2, minmax(0, 1fr))' },
+					   '@media (max-width:800px)': { gridTemplateColumns: '1fr' },
+				   }}
+				   mb={4}
+			   >
+				   {/* Engineering courses with carousels */}
+				   <Box bgcolor="#303947" color="#fff" borderRadius={2} p={2} display="flex" flexDirection="column" alignItems="flex-start" justifyContent="flex-start" sx={{ width: { xs: '100%' }, boxSizing: { xs: 'border-box' } }}>
+					   <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay={false} width="100%" dynamicHeight={false}>
+						   <img src={img_1_1_1} alt="Maker Space Workshops 1" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
+						   <img src={img_1_1_2} alt="Maker Space Workshops 2" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
+						   <img src={img_1_1_3} alt="Maker Space Workshops 3" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
+					   </Carousel>
+					   <Typography fontWeight={700} mt={2} fontFamily="Inter, Arial, sans-serif" sx={{ fontSize: { xs: 16, md: 18 } }}>Enhancing Road Safety Through Multi-Camera Image Segmentation with Post-Encroachment Time Analysis</Typography>
+					   <Typography color="text.secondary" fontFamily="Inter, Arial, sans-serif" sx={{ whiteSpace: 'pre-line' }}>
+						   This paper introduces a real-time, multi-camera, edge-based computer vision system that computes pixel-level Post-Encroachment Time to generate high-resolution heatmaps for scalable, data-driven safety analysis at signalized intersections.{"\n"}
+						   • San Diego State University Internet of Things (IoT) Lab{"\n"}
+						   • Submitted to 2026 IEEE Intelligent Vehicles (IV) Symposium{"\n"}
+						   • January 2024 to November 2025, still ongoing{"\n"}
+						   •{' '}
+						   <Link
+						   href="https://arxiv.org/abs/2511.12018"
+						   target="_blank"
+						   rel="noopener noreferrer"
+						   underline="hover"
+						   color="#fff"
+						   sx={{
+							   display: 'inline-flex',
+							   alignItems: 'center',
+							   gap: 0.5,
+							   fontWeight: 700,
+						   }}
+						   >
+						   View Paper, arXiv:2511.12018 [cs.CV]
+						   <OpenInNewIcon sx={{ fontSize: 16 }} />
+						   </Link>
+					   </Typography>
+				   </Box>
+				   <Box bgcolor="#303947" color="#fff" borderRadius={2} p={2} display="flex" flexDirection="column" alignItems="flex-start" justifyContent="flex-start" sx={{ width: { xs: '100%' }, boxSizing: { xs: 'border-box' } }}>
+					   <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay={false} width="100%" dynamicHeight={false}>
+						   <img src={img_1_2_1} alt="Maker Space Workshops 1" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
+						   <img src={img_1_2_2} alt="Maker Space Workshops 2" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
+						   <img src={img_1_2_3} alt="Maker Space Workshops 3" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
+					   </Carousel>
+					   <Typography fontWeight={700} mt={2} fontFamily="Inter, Arial, sans-serif" sx={{ fontSize: { xs: 16, md: 18 } }}>Low-Cost Multimodal Data Acquisition Systems for Autonomous Vehicle Training in Emerging Markets</Typography>
+					   <Typography color="text.secondary" fontFamily="Inter, Arial, sans-serif" sx={{ whiteSpace: 'pre-line' }}>
+						   This paper presents a low-cost, modular embedded sensing platform deployed on real vehicles to collect large-scale multimodal autonomous driving data in unstructured traffic, demonstrating feasible perception and analysis in underrepresented developing regions.{"\n"}
+						   • Independent Science Fair Project{"\n"}
+						   • Submitting to 2026 IEEE International Conference on Mobility: Operations, Services, and Technologies (MOST){"\n"}
+						   • September 2024 to January 2026, still ongoing{"\n"}
+						   •{' '}
+						   <Link
+						   href="https://www.researchgate.net/publication/399277297_Low-Cost_Multimodal_Data_Acquisition_Systems_for_Autonomous_Vehicle_Training_in_Emerging_Markets"
+						   target="_blank"
+						   rel="noopener noreferrer"
+						   underline="hover"
+						   color="#fff"
+						   sx={{
+							   display: 'inline-flex',
+							   alignItems: 'center',
+							   gap: 0.5,
+							   fontWeight: 700,
+						   }}
+						   >
+						   View Paper, ResearchGate
+						   <OpenInNewIcon sx={{ fontSize: 16 }} />
+						   </Link>
+					   </Typography>
+				   </Box>
+				   <Box bgcolor="#303947" color="#fff" borderRadius={2} p={2} display="flex" flexDirection="column" alignItems="flex-start" justifyContent="flex-start" sx={{ width: { xs: '100%' }, boxSizing: { xs: 'border-box' } }}>
+					   <Carousel showThumbs={false} showStatus={false} infiniteLoop autoPlay={false} width="100%" dynamicHeight={false}>
+						   <img src={img_1_3_1} alt="Intro to Engineering 1" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
+						   <img src={img_1_3_2} alt="Intro to Engineering 2" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
+						   <img src={img_1_3_3} alt="Intro to Engineering 3" style={{ borderRadius: 8, width: '100%', aspectRatio: '16/9', objectFit: 'cover' }} />
+					   </Carousel>
+					   <Typography fontWeight={700} mt={2} fontFamily="Inter, Arial, sans-serif" sx={{ fontSize: { xs: 16, md: 18 } }}>Scaled Autonomous Vehicle Testbed for Real-World System Validation and Prototyping</Typography>
+					   <Typography color="text.secondary" fontFamily="Inter, Arial, sans-serif" sx={{ whiteSpace: 'pre-line' }}>
+						   This paper presents a low-cost, open, modular 18-inch autonomous vehicle testbed with customizable hardware, multimodal sensing, and distributed compute, enabling accessible experimentation, data collection, and education where full-scale AV testing is impractical.{"\n"}
+						   • Independent Symposium Project{"\n"}
+						   • December 2024 to December 2025, still ongoing{"\n"}
+						   •{' '}
+						   <Link
+						   href="https://www.researchgate.net/publication/399277102_Scaled_Autonomous_Vehicle_Testbed_for_Real-World_System_Validation_and_Prototyping"
+						   target="_blank"
+						   rel="noopener noreferrer"
+						   underline="hover"
+						   color="#fff"
+						   sx={{
+							   display: 'inline-flex',
+							   alignItems: 'center',
+							   gap: 0.5,
+							   fontWeight: 700,
+						   }}
+						   >
+						   View Paper, ResearchGate
+						   <OpenInNewIcon sx={{ fontSize: 16 }} />
+						   </Link>
+					   </Typography>
+				   </Box>
+			   </Box>
+			   <Typography align="center" fontWeight={600} fontSize={22} mt={4} mb={2} fontFamily="Inter, Arial, sans-serif">
+				   More projects coming soon!
+			   </Typography>
 		</Box>
 	);
 };

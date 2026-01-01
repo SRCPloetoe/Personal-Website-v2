@@ -9,8 +9,6 @@ import Footer from './components/Footer.tsx';
 import Home from './pages/Home.tsx';
 import About from './pages/About.tsx';
 import Projects from './pages/Projects.tsx';
-import Organizations from './pages/Organizations.tsx';
-import Contact from './pages/Contact.tsx';
 import NotFound from './pages/NotFound.tsx';
 import './App.css';
 
@@ -27,8 +25,6 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/organizations" element={<Organizations />} />
-              <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Box>

@@ -1,152 +1,71 @@
 import React from 'react';
-import cityOfSanDiego from '../img/partners/city_of_san_diego.png';
+import projectnextech from '../img/partners/projectnextech.png';
 import iro from '../img/partners/iro.png';
 import gsdsef from '../img/partners/gsdsef.png';
+import fpsspeechanddebate from '../img/partners/fpsspeechanddebate.png';
 import fps from '../img/partners/fps.png';
-import qualcomm from '../img/partners/q.png';
-import google from '../img/partners/g.png';
-import gallery1 from '../img/gallery_1.png';
-import gallery2 from '../img/gallery_2.png';
-import gallery3 from '../img/gallery_3.png';
-import gallery4 from '../img/gallery_4.png';
-import gallery5 from '../img/gallery_5.png';
-import gallery6 from '../img/gallery_6.png';
-import gallery7 from '../img/gallery_7.png';
-import gallery8 from '../img/gallery_8.png';
+import sdsuengineering from '../img/partners/sdsuengineering.jpg';
+import frc2485 from '../img/partners/frc2485.png';
+import sdccd from '../img/partners/sdccd.png';
+import ucsd from '../img/partners/ucsd.png';
 import { Box, Typography } from '@mui/material';
 
-const bigNumbers = [
-  { number: '1125+', label: 'Students Taught' },
-  { number: '216+', label: 'Student Volunteers' },
-  { number: '12+', label: 'Countries Reached' },
-  { number: '4300+', label: 'Volunteer Hours' },
-  { number: '20+', label: 'Courses Made' },
-  { number: '$6.1k+', label: 'Amount Raised' },
-  { number: '90+', label: 'Programs Run' },
-  { number: '47+', label: 'Regions' },
-];
-
 const partners = [
-  { name: 'City of San Diego', logo: cityOfSanDiego, subtitle: 'We have a Right of Entry contract with the City of San Diego, which allows us to easily run programs at all San Diego Branch Library locations. In exchange for this permission, we provide free STEM programs for library patrons and community members.', url: 'https://www.sandiego.gov/' },
-  { name: 'International Research Olympiad (IRO)', logo: iro, subtitle: 'We are an IRO partner, so all Project NexTech school clubs are IRO-affiliated, and some of our Research curriculum was developed by the IRO. Our mission aligns with their mission of promoting STEM and research across the world.', url: 'https://www.internationalresearcholympiad.org/' },
-  { name: 'Greater San Diego Science and Engineering Fair (GSDSEF)', logo: gsdsef, subtitle: 'We co-host the GSDSEF\'s annual bootcamps for students wanting to participate in the Fair across San Diego. We provide insurance coverage, locations, and students for the events. We also co-developed our [2.3] Intro to Science Fair course with the GSDSEF Student Leadership Board.', url: 'https://www.gsdsef.org/' },
-  { name: 'Francis Parker School', logo: fps, subtitle: 'The eight founding members of Project NexTech were from Francis Parker School. We have a Facilities Use Agreement with the School to be able to host programs on campus for the Linda Vista and wider San Diego community. Our goals align with their mission to promote academic excellence.', url: 'https://www.francisparker.org/' },
-  { name: 'Qualcomm', logo: qualcomm, subtitle: 'We have received over $2000 in funding from Qualcomm through grant-matching, and have applied for more. We also host programs at the Qualcomm campus in San Diego for the Sorrento Valley and wider San Diego community.', url: 'https://www.qualcomm.com/' },
-  { name: 'Google', logo: google, subtitle: 'We have a Google for Nonprofits plan, which allows us to use Google Workspace for our work. Free access to this software has been crucial for our Google Drive, Gmail, Google accounts, and many of the embeds powering this website.', url: 'https://www.google.org/' },
+  { name: 'Student, Francis Parker School', logo: fps, subtitle: 'I\'m currently a senior at Francis Parker. I\'ll graduate Cum Laude in May 2026.', url: 'https://www.francisparker.org/' },
+  { name: 'Student, San Diego Community College District', logo: sdccd, subtitle: 'I\'m concurrently enrolled in mathematics classes in the San Diego Community College District.', url: 'https://www.sdccd.edu/' },
+  { name: 'President, Project NexTech, Inc.', logo: projectnextech, subtitle: 'I\'m the founder and current President of Project NexTech, an international STEM education nonprofit.', url: 'https://projectnextech.org/' },
+  { name: 'Research Intern, San Diego State University IoT Lab', logo: sdsuengineering, subtitle: 'I perform transportation research at the Internet of Things (IoT) Lab under an ECE professor.', url: 'https://iotlab.sdsu.edu/' },
+  { name: 'President, Francis Parker School Speech and Debate', logo: fpsspeechanddebate, subtitle: 'I\'m a fourth-year competitor and nationally ranked speaker and debater of Parker\'s Speech and Debate team.', url: 'https://www.instagram.com/fpsspeechanddebate/' },
+  { name: 'Director of Manufacturing, FRC Team 2485', logo: frc2485, subtitle: 'I\'m a fourth-year competitor in the Build Department of F.I.R.S.T. Robotics Competition Team 2485, Overclocked.', url: 'https://www.francisparker.org/robotics/team/overclocked' },
+  { name: 'VP of Outreach, GSDSEF Student Leadership Board', logo: gsdsef, subtitle: 'I\'m a third-year member of the Greater San Diego Science and Engineering Fair Student Leadership Board.', url: 'https://www.gsdsef.org/' },
+  { name: 'Director of Curriculum, International Research Olympiad', logo: iro, subtitle: 'I\'m a third-year volunteer of the International Research Olympiad, leading curriculum development and helping run the Olympiad.', url: 'https://www.internationalresearcholympiad.org/' },
+  { name: 'Shadow, University of California, San Diego', logo: ucsd, subtitle: 'I shadow mathematics classes and receive informal research guidance from 2 professors at UC San Diego.', url: 'https://www.ucsd.edu/' }
 ];
 
 const About: React.FC = () => (
   <Box px={{ xs: 2, md: 6 }} py={6}>
-    {/* Three-column intro */}
-    <Box display="grid" gridTemplateColumns={{ xs: '1fr', md: '1fr 1fr 1fr' }} gap={4} mb={6}>
-      <Box textAlign="center">
-        <Typography variant="h5" fontWeight={700} fontFamily="Inter, Arial, sans-serif" mb={1} align="center">
-          What is Project NexTech?
-        </Typography>
-        <Typography color="text.secondary" align="center">
-          We are a student-led international nonprofit organization teaching custom science, technology, engineering, and math (STEM) curricula to students at schools, libraries, and community centers worldwide.
-        </Typography>
-      </Box>
-      <Box textAlign="center">
-        <Typography variant="h5" fontWeight={700} fontFamily="Inter, Arial, sans-serif" mb={1} align="center">
-          Why does our work matter?
-        </Typography>
-        <Typography color="text.secondary" align="center">
-          We connect those with a passion for STEM and the resources to help others with the students who need their help the most. We work year-round, across the globe, for all ages of students.
-        </Typography>
-      </Box>
-      <Box textAlign="center">
-        <Typography variant="h5" fontWeight={700} fontFamily="Inter, Arial, sans-serif" mb={1} align="center">
-          Our founding
-        </Typography>
-        <Typography color="text.secondary" align="center">
-          Project NexTech began on May 19th, 2023 as a group of 8 students in San Diego, CA. Its first class had 4 instructors and 2 students. Students voted to teach STEM workshops for people beyond school.
-        </Typography>
-      </Box>
-    </Box>
-
     {/* Mission & Vision */}
     <Box display="grid" gridTemplateColumns={{ xs: '1fr', md: '1fr 1fr' }} gap={4} mb={6}>
       <Box bgcolor="#473024" color="#fff" borderRadius={2} p={4} border="3px solid #f24c02">
         <Typography variant="h4" fontWeight={700} fontFamily="Inter, Arial, sans-serif" mb={1} align="center">
-          Our Mission
+          Research Focus
         </Typography>
         <Typography>
-          To inspire and support a global community of students through interactive, accessible, and high-quality STEM education, equipping them with a passion to combat real-world problems.
+          I'm an ambitious student, engineer, programmer, and volunteer in San Diego. I plan to major in Mechanical Engineering, Electrical/Computer Engineering, or Robotics.
+          <br />
+          <Box sx={{ height: '0.5em' }} /> {/* Half line break */}
+          I build robots, machines, and contraptions to solve problems. I'm professionally certified in computer-aided design (CAD) with 4 years of experience in CAD/CAM through SolidWorks and Onshape. I'm a qualified CNC machinist, 3D printing enthusiast, and solderer. I've used these skills to create a custom-made model robot car, 8 vehicle data collection modules, multiple F.I.R.S.T. Robotics Competition robots, and more.
+          <br />
+          <Box sx={{ height: '0.5em' }} /> {/* Half line break */}
+          I create software. I have several years of programming experience, proficient in Python (5 years), Java (4 years), JavaScript/HTML (5 years), and C++ (9 years). I've used these skills to create perception software for autonomous vehicles, vehicle detection/tracking software, machine learning models, a personal and nonprofit React.js website, an Android app, control systems for remote-controlled cars, and more.
+          <br />
+          <Box sx={{ height: '0.5em' }} /> {/* Half line break */}
+          I'm a passionate researcher and presenter. I've interned at several university labs and programs, developing a wide set of experiences. I compete at science fairs and symposia, such as the GSDSEF, and submit to academic conferences and journals, including JSHS, IEEE IV, IEEE MOST, and more. I also compete in Speech and Debate, having qualified for and competed at the state tournament (#6 in CA) and national tournament (Top 60 in US) in 2025.
+          <br />
+          <Box sx={{ height: '0.5em' }} /> {/* Half line break */}
+          In college, I want to learn about cutting-edge autonomous vehicle technology, identifying how to innovate and make it profitable for developing countries.
         </Typography>
       </Box>
       <Box bgcolor="#303947" color="#fff" borderRadius={2} p={4} border="3px solid #4083cc">
         <Typography variant="h4" fontWeight={700} fontFamily="Inter, Arial, sans-serif" mb={1} align="center">
-          Our Vision
+          Academics
         </Typography>
         <Typography>
-          A world where students with opportunity can volunteer easily, students in need can easily access many types of STEM education, and Project NexTech is an international hub for STEM education.
+          I challenge myself academically by taking difficult classes and holding myself to high standards. Before graduating cum laude in May 2026, I'll finish 15 AP courses and 6 college courses, exhausting all math offerings at my school and community college.
+          <br />
+          <Box sx={{ height: '0.5em' }} /> {/* Half line break */}
+          At school, I'm involved with: Project NexTech Club (President), organizing volunteer training and classes; Speech and Debate (President), leading practice sessions and registration; Math Club (President), hosting review sessions; and Robotics (Director of Manufacturing), leading training, machining tasks, and onboarding. I was also an admissions ambassador for 7 years.
+          <br />
+          <Box sx={{ height: '0.5em' }} /> {/* Half line break */}
+          I lead the largest student-led STEM nonprofit in San Diego, Project NexTech (visit projectnextech.org), with a team of 260+ volunteers. We teach STEM classes through our 20 custom-made courses. We do outreach for organizations in need, manage our online presence, handle lots of data, and manage our student leaders. We've taught 1580+ students in 17+ countries.
         </Typography>
       </Box>
     </Box>
 
-    {/* Image Gallery Section: Programs Gallery */}
-    <Box mb={6}>
-      <Box
-        display="grid"
-        gridTemplateColumns={{ xs: '1fr 1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr 1fr' }}
-        gridTemplateRows={{ xs: '1fr 1fr', sm: '1fr 1fr', md: '1fr 1fr' }}
-        gap={3}
-      >
-        {/* Add your program images below. Replace src with your actual image paths. */}
-  <img src={gallery1} alt="Program 1" style={{ width: '100%', borderRadius: 12, objectFit: 'cover' }} />
-  <img src={gallery2} alt="Program 2" style={{ width: '100%', borderRadius: 12, objectFit: 'cover' }} />
-  <img src={gallery3} alt="Program 3" style={{ width: '100%', borderRadius: 12, objectFit: 'cover' }} />
-  <img src={gallery4} alt="Program 4" style={{ width: '100%', borderRadius: 12, objectFit: 'cover' }} />
-  <img src={gallery5} alt="Program 5" style={{ width: '100%', borderRadius: 12, objectFit: 'cover' }} />
-  <img src={gallery6} alt="Program 6" style={{ width: '100%', borderRadius: 12, objectFit: 'cover' }} />
-  <img src={gallery7} alt="Program 7" style={{ width: '100%', borderRadius: 12, objectFit: 'cover' }} />
-  <img src={gallery8} alt="Program 8" style={{ width: '100%', borderRadius: 12, objectFit: 'cover' }} />
-      </Box>
-    </Box>
-    {/* Big Numbers Grid 4x2 */}
-    <Box mb={6}>
-      <Box display="grid" gridTemplateColumns={{ xs: '1fr 1fr', md: '1fr 1fr 1fr 1fr' }} gridTemplateRows={{ xs: '1fr 1fr 1fr 1fr', md: '1fr 1fr' }} gap={4}>
-        {bigNumbers.map((item, idx) => {
-          // Numbers to highlight in blue
-          const blueNumbers = ['20+', '216+', '90+', '4300+'];
-          const numberColor = blueNumbers.includes(item.number) ? '#4083cc' : '#f24c02';
-          return (
-            <Box key={idx} bgcolor="#473024" color="#fff" borderRadius={2} textAlign="center" py={5} px={2} display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-              <Typography variant="h3" fontWeight={700} color={numberColor} fontFamily="Inter, Arial, sans-serif">
-                {item.number}
-              </Typography>
-              <Typography color="#b0b0b0" fontFamily="Inter, Arial, sans-serif">
-                {item.label}
-              </Typography>
-            </Box>
-          );
-        })}
-      </Box>
-    </Box>
-
-    {/* Google MyMap Embed */}
-    <Box mb={6} textAlign="center">
-      <Typography variant="h4" fontWeight={700} mb={2} fontFamily="Inter, Arial, sans-serif" align="center">
-        Our Impact Map
-      </Typography>
-      <Box width="100%">
-        <iframe
-          title="Google MyMap"
-          src="https://www.google.com/maps/d/u/0/embed?mid=1cfW8EF2DcCvJ3TkhxMR73vx3O3sCFfA&ehbc=2E312F"
-          width="100%"
-          height="640"
-          style={{ border: 0, width: '100%' }}
-          allowFullScreen
-          loading="lazy"
-        ></iframe>
-      </Box>
-    </Box>
-
-    {/* Partners Showcase 3x2 */}
+    {/* Partners Showcase 3x3 */}
     <Box>
       <Typography variant="h4" fontWeight={700} mb={2} fontFamily="Inter, Arial, sans-serif" align="center">
-        Our Partners
+        Organizations
       </Typography>
       <Box display="grid" gridTemplateColumns={{ xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' }} gap={4}>
         {partners.map((partner, idx) => (

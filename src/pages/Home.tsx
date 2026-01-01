@@ -41,19 +41,8 @@ const carouselCaptions = [
 const buttons = [
   { label: 'Learn about me', to: '/about', color: 'primary' },
   { label: 'View my projects', to: '/projects', color: 'secondary' },
-  { label: 'See what I do', to: '/organizations', color: 'primary' },
-  { label: 'Contact me', to: '/contact', color: 'secondary' },
   { label: 'Project NexTech', to: 'https://projectnextech.org', color: 'primary', external: true },
-  { label: 'My LinkedIn', to: 'https://linkedin.com/in/shounakrc', color: 'secondary', external: true },
-];
-
-
-// Only show the relevant stats for Home page
-const bigNumbers = [
-  globalBigNumbers[0], // Students Taught
-  globalBigNumbers[2], // Countries Reached
-  globalBigNumbers[3], // Volunteer Hours
-  globalBigNumbers[6], // Programs Run
+  { label: 'LinkedIn', to: 'https://linkedin.com/in/shounakrc', color: 'secondary', external: true },
 ];
 
 const Home: React.FC = () => (
